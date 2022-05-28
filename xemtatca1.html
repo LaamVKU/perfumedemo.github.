@@ -1,0 +1,1102 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+
+    <link rel="stylesheet" href="css/sach-moi-tuyen-chon.css">
+    <script type="text/javascript" src="js/main.js"></script>
+    <link rel="stylesheet" href="fontawesome_free_5.13.0/css/all.css">
+
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" type="text/css" href="slick/slick.css" />
+    <link rel="stylesheet" type="text/css" href="slick/slick-theme.css" />
+    <script type="text/javascript" src="slick/slick.min.js"></script>
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css" />
+    <script src="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script>
+    <script type="text/javascript"
+        src="http://ajax.aspnetcdn.com/ajax/jquery.validate/1.13.1/jquery.validate.min.js"></script>
+
+        <link rel="apple-touch-icon" sizes="180x180" href="./favicon_io1/apple-touch-icon.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="favicon_io1/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="./favicon_io1/favicon-16x16.png">
+        <link rel="manifest" href="./favicon_io1/site.webmanifest">
+</head>
+
+<body>
+    <!-- code cho nut like share facebook  -->
+    <div id="fb-root"></div>
+    <script async defer crossorigin="anonymous"
+        src="https://connect.facebook.net/vi_VN/sdk.js#xfbml=1&version=v6.0"></script>
+
+    <!-- header -->
+    <nav class="navbar navbar-expand-md bg-white navbar-light">
+        <div class="container">
+            <!-- logo  -->
+            <a class="navbar-brand" href="index.html" style="color: #CF111A;"><b>Lam</b>Perfume</a>
+
+            <!-- navbar-toggler  -->
+            <button class="navbar-toggler d-lg-none" type="button" data-toggle="collapse"
+                data-target="#collapsibleNavId" aria-controls="collapsibleNavId" aria-expanded="false"
+                aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+
+            <div class="collapse navbar-collapse" id="collapsibleNavId">
+                <!-- form tìm kiếm  -->
+                <form class="form-inline ml-auto my-2 my-lg-0 mr-3">
+                    <div class="input-group" style="width: 520px;">
+                        <input type="text" class="form-control" aria-label="Small"
+                            placeholder="Nhập sách cần tìm kiếm...">
+                        <div class="input-group-append">
+                            <button type="button" class="btn" style="background-color: #CF111A; color: white;">
+                                <i class="fa fa-search"></i>
+                            </button>
+                        </div>
+                    </div>
+                </form>
+
+                <!-- ô đăng nhập đăng ký giỏ hàng trên header  -->
+                <ul class="navbar-nav mb-1 ml-auto">
+                    <div class="dropdown">
+                        <li class="nav-item account" type="button" class="btn dropdown" data-toggle="dropdown">
+                            <a href="#" class="btn btn-secondary rounded-circle">
+                                <i class="fa fa-user"></i>
+                            </a>
+                            <a class="nav-link text-dark text-uppercase" href="#" style="display:inline-block">Tài
+                                khoản</a>
+                        </li>
+                        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                            <a class="dropdown-item nutdangky text-center mb-2" href="#" data-toggle="modal"
+                                data-target="#formdangky">Đăng ký</a>
+                            <a class="dropdown-item nutdangnhap text-center" href="#" data-toggle="modal"
+                                data-target="#formdangnhap">Đăng nhập</a>
+                        </div>
+                    </div>
+                    <li class="nav-item giohang">
+                        <a href="gio-hang.html" class="btn btn-secondary rounded-circle">
+                            <i class="fa fa-shopping-cart"></i>
+                            <div class="cart-amount">0</div>
+                        </a>
+                        <a class="nav-link text-dark giohang text-uppercase" href="gio-hang.html"
+                            style="display:inline-block">Giỏ
+                            Hàng</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    
+
+    <!-- form dang ky khi click vao button tren header-->
+    <div class="modal fade mt-5" id="formdangky" data-backdrop="static" tabindex="-1" aria-labelledby="dangky_tieude"
+        aria-hidden="true">
+        <div class="modal-dialog ">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <ul class="tabs d-flex justify-content-around list-unstyled mb-0">
+                        <li class="tab tab-dangnhap text-center">
+                            <a class=" text-decoration-none">Đăng nhập</a>
+                            <hr>
+                        </li>
+                        <li class="tab tab-dangky text-center">
+                            <a class="text-decoration-none">Đăng ký</a>
+                            <hr>
+                        </li>
+                    </ul>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <form id="form-signup" class="form-signin mt-2">
+                        <div class="form-label-group">
+                            <input type="text" class="form-control" placeholder="Nhập họ và tên" name="name" required
+                                autofocus>
+                        </div>
+                        <div class="form-label-group">
+                            <input type="text" class="form-control" placeholder="Nhập số điện thoại" name="phone"
+                                required>
+                        </div>
+                        <div class="form-label-group">
+                            <input type="email" class="form-control" placeholder="Nhập địa chỉ email" name="email"
+                                required>
+                        </div>
+                        <div class="form-label-group">
+                            <input type="password" class="form-control" placeholder="Nhập mật khẩu" name="password"
+                                required>
+                        </div>
+                        <div class="form-label-group mb-4">
+                            <input type="password" class="form-control" name="confirm_password"
+                                placeholder="Nhập lại mật khẩu" required>
+                        </div>
+                        <button class="btn btn-lg btn-block btn-signin text-uppercase text-white mt-3" type="submit"
+                            style="background: #F5A623">Đăng ký</button>
+                        <hr class="mt-3 mb-2">
+                        <div class="custom-control custom-checkbox">
+                            <p class="text-center">Bằng việc đăng ký, bạn đã đồng ý với DealBook về</p>
+                            <a href="#" class="text-decoration-none text-center" style="color: #F5A623">Điều khoản dịch
+                                vụ & Chính sách bảo mật</a>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- form dang nhap khi click vao button tren header-->
+    <div class="modal fade mt-5" id="formdangnhap" data-backdrop="static" tabindex="-1"
+        aria-labelledby="dangnhap_tieude" aria-hidden="true">
+        <div class="modal-dialog ">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <ul class="tabs d-flex justify-content-around list-unstyled mb-0">
+                        <li class="tab tab-dangnhap text-center">
+                            <a class=" text-decoration-none">Đăng nhập</a>
+                            <hr>
+                        </li>
+                        <li class="tab tab-dangky text-center">
+                            <a class="text-decoration-none">Đăng ký</a>
+                            <hr>
+                        </li>
+                    </ul>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <form id="form-signin" class="form-signin mt-2">
+                        <div class="form-label-group">
+                            <input type="email" class="form-control" placeholder="Nhập địa chỉ email" name="email"
+                                required autofocus>
+                        </div>
+
+                        <div class="form-label-group">
+                            <input type="password" class="form-control" placeholder="Mật khẩu" name="password" required>
+                        </div>
+
+                        <div class="custom-control custom-checkbox mb-3">
+                            <input type="checkbox" class="custom-control-input" id="customCheck1">
+                            <label class="custom-control-label" for="customCheck1">Nhớ mật khẩu</label>
+                            <a href="#" class="float-right text-decoration-none" style="color: #F5A623">Quên mật
+                                khẩu</a>
+                        </div>
+
+                        <button class="btn btn-lg btn-block btn-signin text-uppercase text-white" type="submit"
+                            style="background: #F5A623">Đăng nhập</button>
+                        <hr class="my-4">
+                        <button class="btn btn-lg btn-google btn-block text-uppercase" type="submit"><i
+                                class="fab fa-google mr-2"></i> Đăng nhập bằng Google</button>
+                        <button class="btn btn-lg btn-facebook btn-block text-uppercase" type="submit"><i
+                                class="fab fa-facebook-f mr-2"></i> Đăng nhập bằng Facebook</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- thanh "danh muc sach" đã được ẩn bên trong + hotline + ho tro truc tuyen -->
+    <section class="duoinavbar">
+        <div class="container text-white">
+            <div class="row justify">
+                <div class="col-lg-3 col-md-5">
+                    <div class="categoryheader">
+                        <div class="noidungheader text-white">
+                            <i class="fa fa-bars"></i>
+                            <span class="text-uppercase font-weight-bold ml-1">Danh mục nước hoa</span>
+                        </div>
+                        <!-- CATEGORIES -->
+                        <div class="categorycontent">
+                            <ul>
+                                <li> <a href="#"> Nước Hoa Nam</a><i class="fa fa-chevron-right float-right"></i>
+                                    <ul>
+                                        <li class="liheader"><a href="#" class="header text-uppercase">Nước Hoa Nam
+                                                </a></li>
+                                        <div class="content trai">
+                                            <li><a href="sp1.html">Nước Hoa Designer Nam</a></li>
+                                           
+                        
+                                        </div>
+                                        <div class="content phai">
+                                            <li><a href="#">Nước Hoa Niche Nam</a></li>
+                                           
+                                        </div>
+                                    </ul>
+                                </li>
+    
+                                <li><a href="#">Nước Hoa Nữ </a><i class="fa fa-chevron-right float-right"></i>
+                                    <ul>
+                                        <li class="liheader"><a href="#" class="header text-uppercase">Nước Hoa Nữ
+                                               </a></li>
+                                        <div class="content trai">
+                                            <li><a href="#">Nước Hoa Designer Nữ</a></li>
+                                            
+                            
+                                        </div>
+                                        <div class="content phai">
+                                            <li><a href="#">Nước Hoa Niche Nữ</a></li>
+                                        </div>
+                                    </ul>
+                                </li>
+                                <li><a href="#">Nước Hoa Mini</a><i class="fa fa-chevron-right float-right"></i>
+                                   
+                                        
+                                </li>
+                                
+                               
+                               
+                                
+                                <li><a href="#">Hàng mới về</a><i class="fa fa-chevron-right float-right"></i>
+                                    
+                                </li>
+                               
+                                    </ul>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                
+    </section>
+
+    <!-- breadcrumb  -->
+    <section class="breadcrumbbar">
+        <div class="container">
+            <ol class="breadcrumb mb-0 p-0 bg-transparent">
+                <li class="breadcrumb-item"><a href="index.html">Trang chủ</a></li>
+                <li class="breadcrumb-item active"><a href="xemtatca1.html">Nước Hoa Niche Nam</a></li>
+            </ol>
+        </div>
+    </section>
+
+    <!-- ảnh banner -->
+    <section class="banner">
+        <div class="container">
+            <a href="xemtatca1.html"><img src="./img/banner-nuoc-hoa.jpg" alt="sach-moi-full-banner"
+                    class="img-fluid"></a>
+        </div>
+    </section>
+
+    <!-- các sản phẩm  -->
+    <section class="content my-4">
+        <div class="container">
+            <div class="noidung bg-white" style=" width: 100%;">
+                <div class="items">
+                    <div class="row">
+                        <div class="col-lg-3 col-md-4 col-xs-6">
+
+                            <!-- 1 sản phẩm  -->
+                            <div class="card">
+                                <a href="louis.html" class="motsanpham"
+                                    style="text-decoration: none; color: black;" data-toggle="tooltip"
+                                    data-placement="bottom" title="Lập Kế Hoạch Kinh Doanh Hiệu Quả">
+                                    <img class="card-img-top anh" src="./img2/louis.jpg" alt="">
+                                    <div class="card-body noidungsp mt-3">
+                                        <h6 class="card-title ten">Louis Vuitton On The Beach Eau De Parfum</h6>
+                                        <small class="tacgia text-muted">Louis Vuitton</small>
+                                        <div class="gia d-flex align-items-baseline">
+                                            <div class="giamoi">15.000.000 ₫</div>
+                                            
+                                        </div>
+                                        <div class="danhgia">
+                                            <ul class="d-flex" style="list-style: none;">
+                                                <li class="active"><i class="fa fa-star"></i></li>
+                                                <li class="active"><i class="fa fa-star"></i></li>
+                                                <li class="active"><i class="fa fa-star"></i></li>
+                                                <li class="active"><i class="fa fa-star"></i></li>
+                                                <li><i class="fa fa-star"></i></li>
+                                                <span class="text-muted">0 nhận xét</span>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+
+                        </div>
+                        <div class="col-lg-3 col-md-4 col-xs-6">
+                            <div class="card">
+                                <a href="mfk.html" class="motsanpham"
+                                    style="text-decoration: none; color: black;" data-toggle="tooltip"
+                                    data-placement="bottom" title="Lập Kế Hoạch Kinh Doanh Hiệu Quả">
+                                    <img class="card-img-top anh" src="./img2/satin.jpg" alt="">
+                                    <div class="card-body noidungsp mt-3">
+                                        <h6 class="card-title ten">MFK Oud Satin Mood EDP</h6>
+                                        <small class="tacgia text-muted">Maison Francis Kurkdjian</small>
+                                        <div class="gia d-flex align-items-baseline">
+                                            <div class="giamoi">10.500.000 ₫</div>
+                                            
+                                        </div>
+                                        <div class="danhgia">
+                                            <ul class="d-flex" style="list-style: none;">
+                                                <li class="active"><i class="fa fa-star"></i></li>
+                                                <li class="active"><i class="fa fa-star"></i></li>
+                                                <li class="active"><i class="fa fa-star"></i></li>
+                                                <li class="active"><i class="fa fa-star"></i></li>
+                                                <li><i class="fa fa-star"></i></li>
+                                                <span class="text-muted">0 nhận xét</span>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                        </div><div class="col-lg-3 col-md-4 col-xs-6">
+                            <div class="card">
+                                <a href="kilian.html" class="motsanpham"
+                                    style="text-decoration: none; color: black;" data-toggle="tooltip"
+                                    data-placement="bottom" title="Lập Kế Hoạch Kinh Doanh Hiệu Quả">
+                                    <img class="card-img-top anh" src="./img2/kilian love.jpg" alt="lap-ke-hoach-kinh-doanh-hieu-qua">
+                                    <div class="card-body noidungsp mt-3">
+                                        <h6 class="card-title ten">Kilian Rolling In Love EDP</h6>
+                                        <small class="tacgia text-muted">Kilian</small>
+                                        <div class="gia d-flex align-items-baseline">
+                                            <div class="giamoi">5.250.000 ₫</div>
+                                            
+                                        </div>
+                                        <div class="danhgia">
+                                            <ul class="d-flex" style="list-style: none;">
+                                                <li class="active"><i class="fa fa-star"></i></li>
+                                                <li class="active"><i class="fa fa-star"></i></li>
+                                                <li class="active"><i class="fa fa-star"></i></li>
+                                                <li class="active"><i class="fa fa-star"></i></li>
+                                                <li><i class="fa fa-star"></i></li>
+                                                <span class="text-muted">0 nhận xét</span>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                        </div><div class="col-lg-3 col-md-4 col-xs-6">
+                            <div class="card">
+                                <a href="initio.html" class="motsanpham" style="text-decoration: none; color: black;"
+                                    data-toggle="tooltip" data-placement="bottom" title="Bộ Sách 500 Câu Chuyện Đạo Đức - Những Câu Chuyện
+                                Tình Thân (Bộ 8 Cuốn)">
+                                    <img class="card-img-top anh" src="./img2/initio.jpg"
+                                        alt="">
+                                    <div class="card-body noidungsp mt-3">
+                                        <h6 class="card-title ten">Initio Parfums Prives Oud for Greatness EDP</h6>
+                                        <small class="tacgia text-muted">Initio Parfums Prives Oud for Greatness EDP</small>
+                                        <div class="gia d-flex align-items-baseline">
+                                            <div class="giamoi">6.500.000 ₫</div>
+                                            
+                                        </div>
+                                        <div class="danhgia">
+                                            <ul class="d-flex" style="list-style: none;">
+                                                <li class="active"><i class="fa fa-star"></i></li>
+                                                <li class="active"><i class="fa fa-star"></i></li>
+                                                <li class="active"><i class="fa fa-star"></i></li>
+                                                <li class="active"><i class="fa fa-star"></i></li>
+                                                <li><i class="fa fa-star"></i></li>
+                                                <span class="text-muted">0 nhận xét</span>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                        </div><div class="col-lg-3 col-md-4 col-xs-6">
+                            <div class="card">
+                                <a href="roja.html" class="motsanpham" style="text-decoration: none; color: black;"
+                                    data-toggle="tooltip" data-placement="bottom"
+                                    title="Lịch Sử Ung Thư - Hoàng Đế Của Bách Bệnh">
+                                    <img class="card-img-top anh" src="./img2/roja.jpg"
+                                        alt="">
+                                    <div class="card-body noidungsp mt-3">
+                                        <h6 class="card-title ten">Roja Parfums Elysium Pour Homme Parfum Cologne</h6>
+                                        <small class="tacgia text-muted">Roja</small>
+                                        <div class="gia d-flex align-items-baseline">
+                                            <div class="giamoi">6.250.000 ₫</div>
+                                            
+                                        </div>
+                                        <div class="danhgia">
+                                            <ul class="d-flex" style="list-style: none;">
+                                                <li class="active"><i class="fa fa-star"></i></li>
+                                                <li class="active"><i class="fa fa-star"></i></li>
+                                                <li class="active"><i class="fa fa-star"></i></li>
+                                                <li class="active"><i class="fa fa-star"></i></li>
+                                                <li><i class="fa fa-star"></i></li>
+                                                <span class="text-muted">0 nhận xét</span>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                        </div><div class="col-lg-3 col-md-4 col-xs-6">
+                            <div class="card">
+                                <a href="lelabo.html" class="motsanpham" style="text-decoration: none; color: black;"
+                                    data-toggle="tooltip" data-placement="bottom"
+                                    title="">
+                                    <img class="card-img-top anh" src="./img2/santal 33.jpg"
+                                        alt="troi-dem-huyen-dieu">
+                                    <div class="card-body noidungsp mt-3">
+                                        <h6 class="card-title ten">Le Labo Santal 33</h6>
+                                        <small class="tacgia text-muted">Le Labo</small>
+                                        <div class="gia d-flex align-items-baseline">
+                                            <div class="giamoi">5.800.000 ₫</div>
+                                        </div>
+                                        <div class="danhgia">
+                                            <ul class="d-flex" style="list-style: none;">
+                                                <li class="active"><i class="fa fa-star"></i></li>
+                                                <li class="active"><i class="fa fa-star"></i></li>
+                                                <li class="active"><i class="fa fa-star"></i></li>
+                                                <li class="active"><i class="fa fa-star"></i></li>
+                                                <li><i class="fa fa-star"></i></li>
+                                                <span class="text-muted">0 nhận xét</span>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                        </div><div class="col-lg-3 col-md-4 col-xs-6">
+                            <div class="card">
+                                <a href="tomford.html" class="motsanpham" style="text-decoration: none; color: black;"
+                                    data-toggle="tooltip" data-placement="bottom"
+                                    title="Bộ Sách Những Câu Chuyện Cho Con Thành Người Tử Tế (Bộ 5 Cuốn)">
+                                    <img class="card-img-top anh"
+                                        src="./img2/tomford.jpg"
+                                        alt="bo-sach-nhung-cau-chuyen-cho-con-thanh-nguoi-tu-te">
+                                    <div class="card-body noidungsp mt-3">
+                                        <h6 class="card-title ten">Tom Ford Tobacco Vanille EDP</h6>
+                                        <small class="tacgia text-muted">Tom Ford</small>
+                                        <div class="gia d-flex align-items-baseline">
+                                            <div class="giamoi">5.800.000 ₫</div>
+                                          
+                                        </div>
+                                        <div class="danhgia">
+                                            <ul class="d-flex" style="list-style: none;">
+                                                <li class="active"><i class="fa fa-star"></i></li>
+                                                <li class="active"><i class="fa fa-star"></i></li>
+                                                <li class="active"><i class="fa fa-star"></i></li>
+                                                <li class="active"><i class="fa fa-star"></i></li>
+                                                <li><i class="fa fa-star"></i></li>
+                                                <span class="text-muted">0 nhận xét</span>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                        </div><div class="col-lg-3 col-md-4 col-xs-6">
+                            <div class="card">
+                                <a href="lelabo1.html" class="motsanpham"
+                                    style="text-decoration: none; color: black;" data-toggle="tooltip"
+                                    data-placement="bottom" title="Lập Kế Hoạch Kinh Doanh Hiệu Quả">
+                                    <img class="card-img-top anh" src="./img2/another 13 1.jpg" alt="lap-ke-hoach-kinh-doanh-hieu-qua">
+                                    <div class="card-body noidungsp mt-3">
+                                        <h6 class="card-title ten">Le Labo Another 13</h6>
+                                        <small class="tacgia text-muted">Le Labo</small>
+                                        <div class="gia d-flex align-items-baseline">
+                                            <div class="giamoi">5.800.000 ₫</div>
+                                          
+                                        </div>
+                                        <div class="danhgia">
+                                            <ul class="d-flex" style="list-style: none;">
+                                                <li class="active"><i class="fa fa-star"></i></li>
+                                                <li class="active"><i class="fa fa-star"></i></li>
+                                                <li class="active"><i class="fa fa-star"></i></li>
+                                                <li class="active"><i class="fa fa-star"></i></li>
+                                                <li><i class="fa fa-star"></i></li>
+                                                <span class="text-muted">0 nhận xét</span>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                        </div><div class="col-lg-3 col-md-4 col-xs-6">
+                            <div class="card">
+                                <a href="lelabo2.html" class="motsanpham"
+                                    style="text-decoration: none; color: black;" data-toggle="tooltip"
+                                    data-placement="bottom" title="Lập Kế Hoạch Kinh Doanh Hiệu Quả">
+                                    <img class="card-img-top anh" src="./img2/bergamote 22.jpg" alt="lap-ke-hoach-kinh-doanh-hieu-qua">
+                                    <div class="card-body noidungsp mt-3">
+                                        <h6 class="card-title ten">Le Labo Bergamot 22</h6>
+                                        <small class="tacgia text-muted">Le Labo</small>
+                                        <div class="gia d-flex align-items-baseline">
+                                            <div class="giamoi">5.800.000 ₫</div>
+                                           
+                                        </div>
+                                        <div class="danhgia">
+                                            <ul class="d-flex" style="list-style: none;">
+                                                <li class="active"><i class="fa fa-star"></i></li>
+                                                <li class="active"><i class="fa fa-star"></i></li>
+                                                <li class="active"><i class="fa fa-star"></i></li>
+                                                <li class="active"><i class="fa fa-star"></i></li>
+                                                <li><i class="fa fa-star"></i></li>
+                                                <span class="text-muted">0 nhận xét</span>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                        </div><div class="col-lg-3 col-md-4 col-xs-6">
+                            <div class="card">
+                                <a href="nishane.html" class="motsanpham"
+                                    style="text-decoration: none; color: black;" data-toggle="tooltip"
+                                    data-placement="bottom" title="Lập Kế Hoạch Kinh Doanh Hiệu Quả">
+                                    <img class="card-img-top anh" src="./img2/nishane 1.jpg" alt="">
+                                    <div class="card-body noidungsp mt-3">
+                                        <h6 class="card-title ten">Nishane Wulong Cha Extrait De Parfum</h6>
+                                        <small class="tacgia text-muted">Nishane</small>
+                                        <div class="gia d-flex align-items-baseline">
+                                            <div class="giamoi">3.150.000 ₫</div>
+                                            
+                                        </div>
+                                        <div class="danhgia">
+                                            <ul class="d-flex" style="list-style: none;">
+                                                <li class="active"><i class="fa fa-star"></i></li>
+                                                <li class="active"><i class="fa fa-star"></i></li>
+                                                <li class="active"><i class="fa fa-star"></i></li>
+                                                <li class="active"><i class="fa fa-star"></i></li>
+                                                <li><i class="fa fa-star"></i></li>
+                                                <span class="text-muted">0 nhận xét</span>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                        </div><div class="col-lg-3 col-md-4 col-xs-6">
+                            <div class="card">
+                                <a href="creed.html" class="motsanpham"
+                                    style="text-decoration: none; color: black;" data-toggle="tooltip"
+                                    data-placement="bottom" title="Lập Kế Hoạch Kinh Doanh Hiệu Quả">
+                                    <img class="card-img-top anh" src="./img2/creed aventus.jpg" alt="">
+                                    <div class="card-body noidungsp mt-3">
+                                        <h6 class="card-title ten">Creed Aventus Pour Homme</h6>
+                                        <small class="tacgia text-muted">Creed</small>
+                                        <div class="gia d-flex align-items-baseline">
+                                            <div class="giamoi">7.350.000 ₫</div>
+                                           
+                                        </div>
+                                        <div class="danhgia">
+                                            <ul class="d-flex" style="list-style: none;">
+                                                <li class="active"><i class="fa fa-star"></i></li>
+                                                <li class="active"><i class="fa fa-star"></i></li>
+                                                <li class="active"><i class="fa fa-star"></i></li>
+                                                <li class="active"><i class="fa fa-star"></i></li>
+                                                <li><i class="fa fa-star"></i></li>
+                                                <span class="text-muted">0 nhận xét</span>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                        </div><div class="col-lg-3 col-md-4 col-xs-6">
+                            <div class="card">
+                                <a href="tamdao.html" class="motsanpham"
+                                    style="text-decoration: none; color: black;" data-toggle="tooltip"
+                                    data-placement="bottom" title="Lập Kế Hoạch Kinh Doanh Hiệu Quả">
+                                    <img class="card-img-top anh" src="./img2/tamdao.jpg" alt="lap-ke-hoach-kinh-doanh-hieu-qua">
+                                    <div class="card-body noidungsp mt-3">
+                                        <h6 class="card-title ten">Diptyque Tam Dao EDP</h6>
+                                        <small class="tacgia text-muted">Diptyque</small>
+                                        <div class="gia d-flex align-items-baseline">
+                                            <div class="giamoi">3.550.000 ₫</div>
+                                            
+                                        </div>
+                                        <div class="danhgia">
+                                            <ul class="d-flex" style="list-style: none;">
+                                                <li class="active"><i class="fa fa-star"></i></li>
+                                                <li class="active"><i class="fa fa-star"></i></li>
+                                                <li class="active"><i class="fa fa-star"></i></li>
+                                                <li class="active"><i class="fa fa-star"></i></li>
+                                                <li><i class="fa fa-star"></i></li>
+                                                <span class="text-muted">0 nhận xét</span>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                        </div><div class="col-lg-3 col-md-4 col-xs-6">
+                            <div class="card">
+                                <a href="narciso.html" class="motsanpham"
+                                    style="text-decoration: none; color: black;" data-toggle="tooltip"
+                                    data-placement="bottom" title="Lập Kế Hoạch Kinh Doanh Hiệu Quả">
+                                    <img class="card-img-top anh" src="./img2/narciso.jpg" alt="lap-ke-hoach-kinh-doanh-hieu-qua">
+                                    <div class="card-body noidungsp mt-3">
+                                        <h6 class="card-title ten">Narciso Rodriguez Patchouli Musc EDP</h6>
+                                        <small class="tacgia text-muted">Narciso Rodriguez</small>
+                                        <div class="gia d-flex align-items-baseline">
+                                            <div class="giamoi">3.200.000 ₫</div>
+                                           
+                                        </div>
+                                        <div class="danhgia">
+                                            <ul class="d-flex" style="list-style: none;">
+                                                <li class="active"><i class="fa fa-star"></i></li>
+                                                <li class="active"><i class="fa fa-star"></i></li>
+                                                <li class="active"><i class="fa fa-star"></i></li>
+                                                <li class="active"><i class="fa fa-star"></i></li>
+                                                <li><i class="fa fa-star"></i></li>
+                                                <span class="text-muted">0 nhận xét</span>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                        </div><div class="col-lg-3 col-md-4 col-xs-6">
+                            <div class="card">
+                                <a href="jomalone.html" class="motsanpham"
+                                    style="text-decoration: none; color: black;" data-toggle="tooltip"
+                                    data-placement="bottom" title="Lập Kế Hoạch Kinh Doanh Hiệu Quả">
+                                    <img class="card-img-top anh" src="./img2/jo malone.jpg" alt="lap-ke-hoach-kinh-doanh-hieu-qua">
+                                    <div class="card-body noidungsp mt-3">
+                                        <h6 class="card-title ten">Jo Malone Nectarine Blossom & Honey</h6>
+                                        <small class="tacgia text-muted">Jo Malone</small>
+                                        <div class="gia d-flex align-items-baseline">
+                                            <div class="giamoi">3.050.000 ₫</div>
+                                            
+                                        </div>
+                                        <div class="danhgia">
+                                            <ul class="d-flex" style="list-style: none;">
+                                                <li class="active"><i class="fa fa-star"></i></li>
+                                                <li class="active"><i class="fa fa-star"></i></li>
+                                                <li class="active"><i class="fa fa-star"></i></li>
+                                                <li class="active"><i class="fa fa-star"></i></li>
+                                                <li><i class="fa fa-star"></i></li>
+                                                <span class="text-muted">0 nhận xét</span>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                        </div><div class="col-lg-3 col-md-4 col-xs-6">
+                            <div class="card">
+                                <a href="creed1.html" class="motsanpham"
+                                    style="text-decoration: none; color: black;" data-toggle="tooltip"
+                                    data-placement="bottom" title="Lập Kế Hoạch Kinh Doanh Hiệu Quả">
+                                    <img class="card-img-top anh" src="img2/creed water 1.jpg" alt="lap-ke-hoach-kinh-doanh-hieu-qua">
+                                    <div class="card-body noidungsp mt-3">
+                                        <h6 class="card-title ten">Creed Royal Water</h6>
+                                        <small class="tacgia text-muted">Creed</small>
+                                        <div class="gia d-flex align-items-baseline">
+                                            <div class="giamoi">5.150.000 ₫</div>
+                                            
+                                        </div>
+                                        <div class="danhgia">
+                                            <ul class="d-flex" style="list-style: none;">
+                                                <li class="active"><i class="fa fa-star"></i></li>
+                                                <li class="active"><i class="fa fa-star"></i></li>
+                                                <li class="active"><i class="fa fa-star"></i></li>
+                                                <li class="active"><i class="fa fa-star"></i></li>
+                                                <li><i class="fa fa-star"></i></li>
+                                                <span class="text-muted">0 nhận xét</span>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                        </div><div class="col-lg-3 col-md-4 col-xs-6">
+                            <div class="card">
+                                <a href="macera1.html" class="motsanpham"
+                                    style="text-decoration: none; color: black;" data-toggle="tooltip"
+                                    data-placement="bottom" title="Lập Kế Hoạch Kinh Doanh Hiệu Quả">
+                                    <img class="card-img-top anh" src="./img2/mancera black 1.jpg" alt="">
+                                    <div class="card-body noidungsp mt-3">
+                                        <h6 class="card-title ten">Mancera Black Gold EDP</h6>
+                                        <small class="tacgia text-muted">Mancera</small>
+                                        <div class="gia d-flex align-items-baseline">
+                                            <div class="giamoi">2.190.000 ₫</div>
+                                            
+                                        </div>
+                                        <div class="danhgia">
+                                            <ul class="d-flex" style="list-style: none;">
+                                                <li class="active"><i class="fa fa-star"></i></li>
+                                                <li class="active"><i class="fa fa-star"></i></li>
+                                                <li class="active"><i class="fa fa-star"></i></li>
+                                                <li class="active"><i class="fa fa-star"></i></li>
+                                                <li><i class="fa fa-star"></i></li>
+                                                <span class="text-muted">0 nhận xét</span>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                        </div><div class="col-lg-3 col-md-4 col-xs-6">
+                            <div class="card">
+                                <a href="creed2.html" class="motsanpham"
+                                    style="text-decoration: none; color: black;" data-toggle="tooltip"
+                                    data-placement="bottom" title="Lập Kế Hoạch Kinh Doanh Hiệu Quả">
+                                    <img class="card-img-top anh" src="./img2/creed silver.jpg" alt="lap-ke-hoach-kinh-doanh-hieu-qua">
+                                    <div class="card-body noidungsp mt-3">
+                                        <h6 class="card-title ten">Creed Silver Moutain Water</h6>
+                                        <small class="tacgia text-muted">Creed</small>
+                                        <div class="gia d-flex align-items-baseline">
+                                            <div class="giamoi">5.990.000 ₫</div>
+                                            
+                                        </div>
+                                        <div class="danhgia">
+                                            <ul class="d-flex" style="list-style: none;">
+                                                <li class="active"><i class="fa fa-star"></i></li>
+                                                <li class="active"><i class="fa fa-star"></i></li>
+                                                <li class="active"><i class="fa fa-star"></i></li>
+                                                <li class="active"><i class="fa fa-star"></i></li>
+                                                <li><i class="fa fa-star"></i></li>
+                                                <span class="text-muted">0 nhận xét</span>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                        </div><div class="col-lg-3 col-md-4 col-xs-6">
+                            <div class="card">
+                                <a href="creed3.html" class="motsanpham"
+                                    style="text-decoration: none; color: black;" data-toggle="tooltip"
+                                    data-placement="bottom" title="Lập Kế Hoạch Kinh Doanh Hiệu Quả">
+                                    <img class="card-img-top anh" src="./img2/creed original 1.jpg" alt="lap-ke-hoach-kinh-doanh-hieu-qua">
+                                    <div class="card-body noidungsp mt-3">
+                                        <h6 class="card-title ten">Creed Original Santal</h6>
+                                        <small class="tacgia text-muted">Creed</small>
+                                        <div class="gia d-flex align-items-baseline">
+                                            <div class="giamoi">4.950.000 ₫</div>
+                                           
+                                        </div>
+                                        <div class="danhgia">
+                                            <ul class="d-flex" style="list-style: none;">
+                                                <li class="active"><i class="fa fa-star"></i></li>
+                                                <li class="active"><i class="fa fa-star"></i></li>
+                                                <li class="active"><i class="fa fa-star"></i></li>
+                                                <li class="active"><i class="fa fa-star"></i></li>
+                                                <li><i class="fa fa-star"></i></li>
+                                                <span class="text-muted">0 nhận xét</span>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                        </div><div class="col-lg-3 col-md-4 col-xs-6">
+                            <div class="card">
+                                <a href="johnvarvatos.html" class="motsanpham"
+                                    style="text-decoration: none; color: black;" data-toggle="tooltip"
+                                    data-placement="bottom" title="Lập Kế Hoạch Kinh Doanh Hiệu Quả">
+                                    <img class="card-img-top anh" src="./img2/phan 1.jpg" alt="lap-ke-hoach-kinh-doanh-hieu-qua">
+                                    <div class="card-body noidungsp mt-3">
+                                        <h6 class="card-title ten">Liquides Imaginaires Phan-Tasma EDP</h6>
+                                        <small class="tacgia text-muted">John Varvatos</small>
+                                        <div class="gia d-flex align-items-baseline">
+                                            <div class="giamoi">3.450.000 ₫</div>
+                                           
+                                        </div>
+                                        <div class="danhgia">
+                                            <ul class="d-flex" style="list-style: none;">
+                                                <li class="active"><i class="fa fa-star"></i></li>
+                                                <li class="active"><i class="fa fa-star"></i></li>
+                                                <li class="active"><i class="fa fa-star"></i></li>
+                                                <li class="active"><i class="fa fa-star"></i></li>
+                                                <li><i class="fa fa-star"></i></li>
+                                                <span class="text-muted">0 nhận xét</span>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                        </div><div class="col-lg-3 col-md-4 col-xs-6">
+                            <div class="card">
+                                <a href="merchant.html" class="motsanpham"
+                                    style="text-decoration: none; color: black;" data-toggle="tooltip"
+                                    data-placement="bottom" title="Lập Kế Hoạch Kinh Doanh Hiệu Quả">
+                                    <img class="card-img-top anh" src="./img2/merchant 1.jpg" alt="lap-ke-hoach-kinh-doanh-hieu-qua">
+                                    <div class="card-body noidungsp mt-3">
+                                        <h6 class="card-title ten">The Merchant Of Venice Imperial Emerald Women EDP</h6>
+                                        <small class="tacgia text-muted">Ralph Lauren</small>
+                                        <div class="gia d-flex align-items-baseline">
+                                            <div class="giamoi">3.950.000 ₫</div>
+                                            
+                                        </div>
+                                        <div class="danhgia">
+                                            <ul class="d-flex" style="list-style: none;">
+                                                <li class="active"><i class="fa fa-star"></i></li>
+                                                <li class="active"><i class="fa fa-star"></i></li>
+                                                <li class="active"><i class="fa fa-star"></i></li>
+                                                <li class="active"><i class="fa fa-star"></i></li>
+                                                <li><i class="fa fa-star"></i></li>
+                                                <span class="text-muted">0 nhận xét</span>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                        </div><div class="col-lg-3 col-md-4 col-xs-6">
+                            <div class="card">
+                                <a href="tomford1.html" class="motsanpham"
+                                    style="text-decoration: none; color: black;" data-toggle="tooltip"
+                                    data-placement="bottom" title="Lập Kế Hoạch Kinh Doanh Hiệu Quả">
+                                    <img class="card-img-top anh" src="./img2/leather.jpg" alt="lap-ke-hoach-kinh-doanh-hieu-qua">
+                                    <div class="card-body noidungsp mt-3">
+                                        <h6 class="card-title ten">Tom Ford Ombre Leather EDP</h6>
+                                        <small class="tacgia text-muted">Tom Ford</small>
+                                        <div class="gia d-flex align-items-baseline">
+                                            <div class="giamoi">4.500.000 ₫</div>
+                                           
+                                        </div>
+                                        <div class="danhgia">
+                                            <ul class="d-flex" style="list-style: none;">
+                                                <li class="active"><i class="fa fa-star"></i></li>
+                                                <li class="active"><i class="fa fa-star"></i></li>
+                                                <li class="active"><i class="fa fa-star"></i></li>
+                                                <li class="active"><i class="fa fa-star"></i></li>
+                                                <li><i class="fa fa-star"></i></li>
+                                                <span class="text-muted">0 nhận xét</span>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                        </div><div class="col-lg-3 col-md-4 col-xs-6">
+                            <div class="card">
+                                <a href="kilian1.html" class="motsanpham"
+                                    style="text-decoration: none; color: black;" data-toggle="tooltip"
+                                    data-placement="bottom" title="Lập Kế Hoạch Kinh Doanh Hiệu Quả">
+                                    <img class="card-img-top anh" src="./img2/kilian rose.jpg" alt="lap-ke-hoach-kinh-doanh-hieu-qua">
+                                    <div class="card-body noidungsp mt-3">
+                                        <h6 class="card-title ten">Kilian Rose On Ice EDP</h6>
+                                        <small class="tacgia text-muted">Kilian</small>
+                                        <div class="gia d-flex align-items-baseline">
+                                            <div class="giamoi">4.350.000 ₫</div>
+                                            
+                                        </div>
+                                        <div class="danhgia">
+                                            <ul class="d-flex" style="list-style: none;">
+                                                <li class="active"><i class="fa fa-star"></i></li>
+                                                <li class="active"><i class="fa fa-star"></i></li>
+                                                <li class="active"><i class="fa fa-star"></i></li>
+                                                <li class="active"><i class="fa fa-star"></i></li>
+                                                <li><i class="fa fa-star"></i></li>
+                                                <span class="text-muted">0 nhận xét</span>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                        </div><div class="col-lg-3 col-md-4 col-xs-6">
+                            <div class="card">
+                                <a href="pegasus.html" class="motsanpham"
+                                    style="text-decoration: none; color: black;" data-toggle="tooltip"
+                                    data-placement="bottom" title="Lập Kế Hoạch Kinh Doanh Hiệu Quả">
+                                    <img class="card-img-top anh" src="./img2/pegasus.jpg" alt="lap-ke-hoach-kinh-doanh-hieu-qua">
+                                    <div class="card-body noidungsp mt-3">
+                                        <h6 class="card-title ten">Parfums De Marly Pegasus Exiclusif edition Royal Essence EDP
+                                        </h6>
+                                        <small class="tacgia text-muted">Parfums De Marly
+                                        </small>
+                                        <div class="gia d-flex align-items-baseline">
+                                            <div class="giamoi">4.950.000 ₫</div>
+                                            
+                                        </div>
+                                        <div class="danhgia">
+                                            <ul class="d-flex" style="list-style: none;">
+                                                <li class="active"><i class="fa fa-star"></i></li>
+                                                <li class="active"><i class="fa fa-star"></i></li>
+                                                <li class="active"><i class="fa fa-star"></i></li>
+                                                <li class="active"><i class="fa fa-star"></i></li>
+                                                <li><i class="fa fa-star"></i></li>
+                                                <span class="text-muted">0 nhận xét</span>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                        </div><div class="col-lg-3 col-md-4 col-xs-6">
+                            <div class="card">
+                                <a href="penhal.html" class="motsanpham"
+                                    style="text-decoration: none; color: black;" data-toggle="tooltip"
+                                    data-placement="bottom" title="">
+                                    <img class="card-img-top anh" src="./img2/penha.jpg" alt="lap-ke-hoach-kinh-doanh-hieu-qua">
+                                    <div class="card-body noidungsp mt-3">
+                                        <h6 class="card-title ten">Penhaligons The Tragedy of Lord George EDP</h6>
+                                        <small class="tacgia text-muted">Penhaligon's</small>
+                                        <div class="gia d-flex align-items-baseline">
+                                            <div class="giamoi">5.800.000 ₫</div>
+                                            
+                                        </div>
+                                        <div class="danhgia">
+                                            <ul class="d-flex" style="list-style: none;">
+                                                <li class="active"><i class="fa fa-star"></i></li>
+                                                <li class="active"><i class="fa fa-star"></i></li>
+                                                <li class="active"><i class="fa fa-star"></i></li>
+                                                <li class="active"><i class="fa fa-star"></i></li>
+                                                <li><i class="fa fa-star"></i></li>
+                                                <span class="text-muted">0 nhận xét</span>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- pagination bar  -->
+                <div class="pagination-bar my-3">
+                    <div class="row">
+                        <div class="col-12">
+                            <nav>
+                                <ul class="pagination justify-content-center">
+                                    <!-- <li class="page-item disabled">
+                                        <a class="page-link" href="#" aria-label="Previous">
+                                            <span aria-hidden="true">&laquo;</span>
+                                            <span class="sr-only">Previous</span>
+                                        </a>
+                                    </li> -->
+                                    <li class="page-item active"><a class="page-link" href="#">1</a></li>
+                                    <li class="page-item"><a class="page-link" href="#">2</a></li>
+                                    <li class="page-item">
+                                        <a class="page-link" href="#" aria-label="Next">
+                                            <span aria-hidden="true">&rsaquo;</span>
+                                            <span class="sr-only">Next</span>
+                                        </a>
+                                    </li>
+                                    <li class="page-item">
+                                        <a class="page-link" href="#" aria-label="Next">
+                                            <span aria-hidden="true">&raquo;</span>
+                                            <span class="sr-only">Next</span>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </nav>
+                        </div>
+                    </div>
+                </div>
+                
+                <!--het khoi san pham-->
+            </div>
+            <!--het div noidung-->
+        </div>
+        <!--het container-->
+    </section>
+
+
+    <!-- thanh cac dich vu :mien phi giao hang, qua tang mien phi ........ -->
+    <section class="abovefooter text-white" style="background-color: #CF111A;">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-3 col-sm-6">
+                    <div class="dichvu d-flex align-items-center">
+                        <img src="images/icon-books.png" alt="icon-books">
+                        <div class="noidung">
+                            <h6 class="tieude font-weight-bold">NHIỀU HÃNG NƯỚC HOA ĐÌNH ĐÁM</h6>
+                            <p class="detail">Tuyển chọn bởi LamPerfume</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-sm-6">
+                    <div class="dichvu d-flex align-items-center">
+                        <img src="images/icon-ship.png" alt="icon-ship">
+                        <div class="noidung">
+                            <h6 class="tieude font-weight-bold">MIỄN PHÍ GIAO HÀNG</h6>
+                            <p class="detail">Từ 150.000đ ở TP.HCM</p>
+                            <p class="detail">Từ 300.000đ ở tỉnh thành khác</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-sm-6">
+                    <div class="dichvu d-flex align-items-center">
+                        <img src="images/icon-gift.png" alt="icon-gift">
+                        <div class="noidung">
+                            <h6 class="tieude font-weight-bold">QUÀ TẶNG MIỄN PHÍ</h6>
+                            
+                            <p class="detail">Tặng túi xách mini cửa hàng miễn phí</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-sm-6">
+                    <div class="dichvu d-flex align-items-center">
+                        <img src="images/icon-return.png" alt="icon-return">
+                        <div class="noidung">
+                            <h6 class="tieude font-weight-bold">ĐỔI TRẢ NHANH CHÓNG</h6>
+                            <p class="detail">Hàng bị lỗi được đổi trả nhanh chóng</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- footer  -->
+    <footer>
+        <div class="container py-4">
+            <div class="row">
+                <div class="col-md-3 col-xs-6">
+                    <div class="gioithieu">
+                        <h6 class="header text-uppercase font-weight-bold">Về LamPerfume</h6>
+                        <a href="#">Giới thiệu về LamPerfume</a>
+                        <a href="#">Tuyển dụng</a>
+                        <div class="fb-like" data-href="https://www.facebook.com/Lamperfume-111694964871330"
+                            data-width="300px" data-layout="button" data-action="like" data-size="small"
+                            data-share="true"></div>
+                    </div>
+                </div>
+                <div class="col-md-3 col-xs-6">
+                    <div class="hotrokh">
+                        <h6 class="header text-uppercase font-weight-bold">HỖ TRỢ KHÁCH HÀNG</h6>
+                        <a href="#">Hướng dẫn đặt hàng</a>
+                        <a href="#">Phương thức thanh toán</a>
+                        <a href="#">Phương thức vận chuyển</a>
+                        <a href="#">Chính sách đổi trả</a>
+                    </div>
+                </div>
+                <div class="col-md-3 col-xs-6">
+                    <div class="lienket">
+                        <h6 class="header text-uppercase font-weight-bold">HỢP TÁC VÀ LIÊN KẾT</h6>
+                        <img src="images/dang-ky-bo-cong-thuong.png" alt="dang-ky-bo-cong-thuong">
+                    </div>
+                </div>
+                <div class="col-md-3 col-xs-6">
+                    <div class="ptthanhtoan">
+                        <h6 class="header text-uppercase font-weight-bold">Phương thức thanh toán</h6>
+                        <img src="images/visa-payment.jpg" alt="visa-payment">
+                        <img src="images/master-card-payment.jpg" alt="master-card-payment">
+                        <img src="images/jcb-payment.jpg" alt="jcb-payment">
+                        <img src="images/atm-payment.jpg" alt="atm-payment">
+                        <img src="images/cod-payment.jpg" alt="cod-payment">
+                        <img src="images/payoo-payment.jpg" alt="payoo-payment">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- nut cuon len dau trang -->
+    <div class="fixed-bottom">
+        <div class="btn btn-warning float-right rounded-circle nutcuonlen" id="backtotop" href="#"
+            style="background:#CF111A;"><i class="fa fa-chevron-up text-white"></i></div>
+    </div>
+<!-- Messenger Plugin chat Code -->
+<div id="fb-root"></div>
+
+<!-- Your Plugin chat code -->
+<div id="fb-customer-chat" class="fb-customerchat">
+</div>
+
+<script>
+  var chatbox = document.getElementById('fb-customer-chat');
+  chatbox.setAttribute("page_id", "111694964871330");
+  chatbox.setAttribute("attribution", "biz_inbox");
+</script>
+
+<!-- Your SDK code -->
+<script>
+  window.fbAsyncInit = function() {
+    FB.init({
+      xfbml            : true,
+      version          : 'v13.0'
+    });
+  };
+
+  (function(d, s, id) {
+    var js, fjs = d.getElementsByTagName(s)[0];
+    if (d.getElementById(id)) return;
+    js = d.createElement(s); js.id = id;
+    js.src = 'https://connect.facebook.net/vi_VN/sdk/xfbml.customerchat.js';
+    fjs.parentNode.insertBefore(js, fjs);
+  }(document, 'script', 'facebook-jssdk'));
+</script>
+
+</body>
+
+</html>
